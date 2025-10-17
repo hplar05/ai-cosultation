@@ -15,7 +15,7 @@ export default function Home() {
     // Send to webhook
     try {
       await fetch(
-        "http://localhost:5678/webhook-test/f048764c-0223-47a3-b9ff-00c29482e20c",
+        "http://3.25.74.206:5678/webhook-test/c5ac6a61-99ac-41fa-86bd-06dcc2b7ee69",
         {
           method: "POST",
           headers: {
