@@ -15,7 +15,7 @@ export default function Home() {
     // Send to webhook
     try {
       await fetch(
-        "http://3.25.74.206:5678/webhook-test/c5ac6a61-99ac-41fa-86bd-06dcc2b7ee69",
+        "https://big-jellyfish-94.hooks.n8n.cloud/webhook-test/c5ac6a61-99ac-41fa-86bd-06dcc2b7ee69",
         {
           method: "POST",
           headers: {
