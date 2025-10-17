@@ -15,7 +15,7 @@ export default function Home() {
     // Send to webhook
     try {
       await fetch(
-        "https://n8n-hplar05.onrender.com/webhook-test/862e4414-2b0f-4c5f-9f5e-ebf306328d7a",
+        "http://3.25.74.206:5678/webhook-test/c5ac6a61-99ac-41fa-86bd-06dcc2b7ee69",
         {
           method: "POST",
           headers: {
