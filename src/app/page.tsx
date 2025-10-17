@@ -9,33 +9,34 @@ import ConsultationForm from "@/components/ui/landing/ConsultationForm";
 
 export default function Home() {
   const [showSuccess, setShowSuccess] = useState(false);
-  const [submittedData, setSubmittedData] = useState(null);
+  const [submittedData, setSubmittedData] = useState<any>(null); // Use 'any' or define a type for formData
 
-  const handleFormSubmit = async (formData: React.SetStateAction<null>) => {
-    // Send to webhook
+  const handleFormSubmit = async (formData: any) => {
     try {
-      await fetch(
-        "https://slimy-dog-77.hooks.n8n.cloud/webhook-test/c5ac6a61-99ac-41fa-86bd-06dcc2b7ee69",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("/api/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorDetails = await response.json();
+        throw new Error(`Submission failed: ${errorDetails.message}`);
+      }
 
       setSubmittedData(formData);
       setShowSuccess(true);
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("Error submitting form via proxy:", error);
+
       throw error;
     }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 relative overflow-hidden">
-      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
