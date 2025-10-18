@@ -3,7 +3,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 // The URL of your external n8n webhook
-const N8N_WEBHOOK_URL = "https://ralphsaladino05.app.n8n.cloud/webhook/eabc3524-00e5-4b8a-84bf-10d9ed3a8adf";
+const N8N_WEBHOOK_URL = "https://hplar.app.n8n.cloud/webhook/6adbab4c-5992-4680-bcba-4437b533a216";
 
 export async function POST(req: NextRequest) {
   try {
