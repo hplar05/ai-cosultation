@@ -6,6 +6,7 @@ import SuccessMessage from "@/components/ui/landing/SucessMessage";
 import HeroSection from "@/components/ui/landing/HeroSection";
 import BenefitsSection from "@/components/ui/landing/BenefitsSection";
 import ConsultationForm from "@/components/ui/landing/ConsultationForm";
+import Navbar from "@/components/ui/landing/Navbar";
 
 export default function Home() {
   const [showSuccess, setShowSuccess] = useState(false);
@@ -37,6 +38,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 relative overflow-hidden">
+      <Navbar />
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
