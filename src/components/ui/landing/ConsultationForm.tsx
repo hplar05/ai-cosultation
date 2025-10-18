@@ -123,7 +123,7 @@ export default function ConsultationForm({ onSubmit }: any) {
                   }
                   disabled={isSubmitting}
                 >
-                  <SelectTrigger className="bg-white/10 border-white/20 text-white h-12 text-lg">
+                  <SelectTrigger className="bg-white/10 border-white/20 text-white h-12 text-lg w-full ">
                     <SelectValue placeholder="Select your industry" />
                   </SelectTrigger>
                   <SelectContent>
