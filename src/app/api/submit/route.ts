@@ -2,7 +2,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 
-const N8N_WEBHOOK_URL = "https://hplar.app.n8n.cloud/webhook/6adbab4c-5992-4680-bcba-4437b533a216";
+const N8N_WEBHOOK_URL = "https://n8n-hplar05.onrender.com/webhook/862e4414-2b0f-4c5f-9f5e-ebf306328d7a";
 
 export async function POST(req: NextRequest) {
   try {
